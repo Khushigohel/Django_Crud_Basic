@@ -1,21 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    padding: 30px;
+    background: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
+/* Main Card */
 .container {
+    width: 90%;
     max-width: 900px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 6px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-h2 {
-    text-align: center;
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+.header h2 {
     color: #333;
+}
+
+/* Add Button */
+.add-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #0056b3;
 }
 
 /* Table */
@@ -24,180 +53,134 @@ table {
     border-collapse: collapse;
 }
 
-th {
-    background-color: #2c7be5;
+thead {
+    background: #007bff;
     color: white;
-    padding: 10px;
 }
 
-td {
-    padding: 10px;
+th, td {
+    padding: 12px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
 }
 
-tr:hover {
-    background-color: #f5f7fa;
+tbody tr {
+    border-bottom: 1px solid #eee;
 }
 
-/* Buttons */
+tbody tr:hover {
+    background: #f1f5ff;
+}
+
+/* Action Buttons */
 .btn {
     padding: 6px 12px;
     border-radius: 4px;
     text-decoration: none;
+    color: rgb(10, 9, 9);
+    background-color: #b6b0b0;
     font-size: 13px;
-    color: white;
+    margin: 0 3px;
 }
 
-.btn-edit {
-    background-color: #28a745;
+.btn edit {
+    background: #28a745;
 }
 
-.btn-delete {
-    background-color: #dc3545;
+.btn delete {
+    background: #dc3545;
 }
 
-/* Add Button */
-.add-btn {
-    display: inline-block;
-    margin-bottom: 15px;
-    background-color: #2c7be5;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 4px;
-    text-decoration: none;
-}
-.top-bar {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 15px;
+.edit:hover {
+    background: #1e7e34;
 }
 
-/* ===== Add Student Form ===== */
-.add-form-container {
-    max-width: 500px;           /* Form width */
-    margin: 50px auto;          /* Center on page */
-    background: #ffffff;        /* White background */
-    padding: 30px 25px;         /* Spacing inside form */
-    border-radius: 8px;         /* Rounded corners */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Subtle shadow */
+.delete:hover {
+    background: #bd2130;
 }
 
-/* Form Title */
-.add-form-container h2 {
+
+/* Page Background */
+body {
+    background: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Card Container */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Heading */
+h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #333;
-    font-size: 24px;
+    color: #222;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.back-btn:hover {
+    background: #084298;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 18px;
 }
 
 /* Labels */
-.add-form-container label {
+label {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
-    color: #555;
+    color: #333;
 }
 
 /* Inputs */
-.add-form-container input[type="text"],
-.add-form-container input[type="email"],
-.add-form-container input[type="number"] {
-    width: 90%;
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
     padding: 10px 12px;
-    margin-bottom: 18px;
+    border-radius: 6px;
     border: 1px solid #ccc;
-    border-radius: 5px;
     font-size: 14px;
-    outline: none;
-    transition: 0.3s;
 }
 
-/* Input Focus Effect */
-.add-form-container input:focus {
-    border-color: #2c7be5;
-    box-shadow: 0 0 5px rgba(44,123,229,0.4);
+input:focus {
+    border-color: #0d6efd;
+    outline: none;
 }
 
 /* Submit Button */
-.add-form-container button {
+.submit-btn {
     width: 100%;
-    background-color: #2c7be5;
+    background: #28a745;
     color: white;
     padding: 12px;
-    border: none;
-    border-radius: 6px;
     font-size: 16px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.add-form-container button:hover {
-    background-color: #218838;
-}
-
-
-/* ===== Edit Student Form ===== */
-.edit-form-container {
-    max-width: 500px;           
-    margin: 50px auto;          
-    background: #ffffff;        
-    padding: 30px 25px;         
-    border-radius: 8px;         
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
-}
-
-/* Form Title */
-.edit-form-container h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #333;
-    font-size: 24px;
-}
-
-/* Labels */
-.edit-form-container label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #555;
-}
-
-/* Inputs */
-.edit-form-container input[type="text"],
-.edit-form-container input[type="email"],
-.edit-form-container input[type="number"] {
-    width: 90%;
-    padding: 10px 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    outline: none;
-    transition: 0.3s;
-}
-
-/* Input Focus Effect */
-.edit-form-container input:focus {
-    border-color: #2c7be5;
-    box-shadow: 0 0 5px rgba(44,123,229,0.4);
-}
-
-/* Update Button */
-.edit-form-container button {
-    width: 100%;
-    background-color: #28a745;  /* Green for update */
-    color: white;
-    padding: 12px;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
+    margin-top: 10px;
 }
 
-.edit-form-container button:hover {
-    background-color: #218838;
+.submit-btn:hover {
+    background: #1e7e34;
 }

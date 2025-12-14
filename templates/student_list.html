@@ -1,44 +1,46 @@
-{%  load static %}
+{% load static %}
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Crud</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-    </head>
-    <body>
-      <h2>Student List</h2>
-   <div class="top-bar">
-    <a href="{% url 'add_student' %}" class="add-btn">Add Student</a>
-  </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student CRUD</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
 
-        <table class="table table-striped" border='2' cellpadding="10" >
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Age</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-      {% for list in data %}
-    <tr>
-        <td>{{list.sname}}</td>
-        <td>{{list.semail}}</td>
-        <td>{{list.sage}}</td>
-          <td>
-            <a href="/edit/{{ list.id }}/">Edit</a>
-            <a href="/delete/{{ list.id }}/">Delete</a>
-        </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-        
-    <script src="" async defer></script>
-    </body>
+<div class="container">
+
+    <div class="header">
+        <h2>Student Management</h2>
+        <a href="{% url 'add_student' %}" class="add-btn">+ Add Student</a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for list in data %}
+            <tr>
+                <td>{{ list.sname }}</td>
+                <td>{{ list.semail }}</td>
+                <td>{{ list.sage }}</td>
+                <td class="action">
+                    <a href="/edit/{{ list.id }}/" class="btn edit">Edit</a>
+                    <a href="/delete/{{ list.id }}/" class="btn delete">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+</body>
 </html>

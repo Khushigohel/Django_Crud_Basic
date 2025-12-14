@@ -1,0 +1,33 @@
+# Python cache files
+*.pyc
+__pycache__/
+
+# Virtual environment folders
+myenv/
+venv/
+
+# Django database file
+db.sqlite3
+
+# Environment variables
+.env
+
+# Django static files (collected)
+staticfiles/
+
+# Logs
+*.log
+
+# Migrations (optional)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# IDE files (optional)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db

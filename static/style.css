@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #2c7be5;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f7fa;
+}
+
+/* Buttons */
+.btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+}
+
+.btn-edit {
+    background-color: #28a745;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+/* Add Button */
+.add-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    background-color: #2c7be5;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+/* ===== Add Student Form ===== */
+.add-form-container {
+    max-width: 500px;           /* Form width */
+    margin: 50px auto;          /* Center on page */
+    background: #ffffff;        /* White background */
+    padding: 30px 25px;         /* Spacing inside form */
+    border-radius: 8px;         /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Subtle shadow */
+}
+
+/* Form Title */
+.add-form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Labels */
+.add-form-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Inputs */
+.add-form-container input[type="text"],
+.add-form-container input[type="email"],
+.add-form-container input[type="number"] {
+    width: 90%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+.add-form-container input:focus {
+    border-color: #2c7be5;
+    box-shadow: 0 0 5px rgba(44,123,229,0.4);
+}
+
+/* Submit Button */
+.add-form-container button {
+    width: 100%;
+    background-color: #2c7be5;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.add-form-container button:hover {
+    background-color: #218838;
+}
+
+
+/* ===== Edit Student Form ===== */
+.edit-form-container {
+    max-width: 500px;           
+    margin: 50px auto;          
+    background: #ffffff;        
+    padding: 30px 25px;         
+    border-radius: 8px;         
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+}
+
+/* Form Title */
+.edit-form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Labels */
+.edit-form-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Inputs */
+.edit-form-container input[type="text"],
+.edit-form-container input[type="email"],
+.edit-form-container input[type="number"] {
+    width: 90%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+.edit-form-container input:focus {
+    border-color: #2c7be5;
+    box-shadow: 0 0 5px rgba(44,123,229,0.4);
+}
+
+/* Update Button */
+.edit-form-container button {
+    width: 100%;
+    background-color: #28a745;  /* Green for update */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.edit-form-container button:hover {
+    background-color: #218838;
+}

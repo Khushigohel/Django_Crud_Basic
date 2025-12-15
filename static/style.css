@@ -184,3 +184,9 @@ input:focus {
 .submit-btn:hover {
     background: #1e7e34;
 }
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}

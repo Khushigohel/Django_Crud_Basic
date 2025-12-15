@@ -12,15 +12,20 @@ def add_student(request):
         email=request.POST['email']
         age=request.POST['age']
 
-        #validation
-        '''if not name or not email or not age:
+         #validation
+        if not name or not email or not age:
             messages.error(request,"All Filed is required")
-        elif not name.isalpha():
-            messages.error(request, "Name can only contain letters!")
-        elif int(age) < 1 or int(age) > 100:
-            messages.error(request, "Age must be between 1 and 100")'''
+            return redirect('add_student')
+        if not name.isalpha ():
+            messages.error(request,"Name must contain letter..")
+            return redirect('add_student')
+        if int(age) < 0 or int(age) > 100:
+            messages.error(request,"Age must be greater than 1 and 100")
+            return redirect('add_student')
+       
 
         Student.objects.create(sname=name,semail=email,sage=age)
+        messages.success(request, "Student added successfully")
         return redirect('student_list')
     return render(request,'add_student.html')
 
